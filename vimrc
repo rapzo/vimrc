@@ -85,13 +85,13 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Syntax specific
 " Ruby
-autocmd filetype ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 colorcolumn=80
+autocmd filetype ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 colorcolumn=100
 
 "PHP
 autocmd FileType php setlocal colorcolumn=100
 
 " HTML
-autocmd filetype html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 colorcolumn=80
+autocmd filetype html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 colorcolumn=100
 
 "JS
 au BufNew,BufReadPost *.js setlocal shiftwidth=2 expandtab
