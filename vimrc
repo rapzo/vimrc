@@ -26,6 +26,10 @@ Bundle 'skammer/vim-css-color'
 Bundle 'mgutz/vim-colors'
 Bundle 'bling/vim-airline'
 
+" Gist madness
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+
 filetype plugin indent on
 
 
