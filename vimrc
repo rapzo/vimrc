@@ -61,7 +61,7 @@ set undolevels=1000
 set title
 set visualbell
 set noerrorbells
-set guifont=Ubuntu\ Mono\ 10
+set guifont=DejaVu\ Sans\ Mono\ 10
 
 if has("gui_running")
 	set guioptions=-t
