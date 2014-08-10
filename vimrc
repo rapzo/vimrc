@@ -3,32 +3,35 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 
 " Vundle manager
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " Behavior related bundles
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
 
 " Tools related bundles
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'othree/html5.vim'
-Bundle 'leshill/vim-json'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'othree/html5.vim'
+Plugin 'leshill/vim-json'
+Plugin 'pangloss/vim-javascript'
 
 " Others
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'skammer/vim-css-color'
-Bundle 'mgutz/vim-colors'
-Bundle 'bling/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'skammer/vim-css-color'
+Plugin 'mgutz/vim-colors'
+Plugin 'bling/vim-airline'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'StanAngeloff/php.vim'
 
 " Gist madness
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
 
 filetype plugin indent on
 
@@ -59,16 +62,16 @@ set incsearch
 set history=10000
 set undolevels=1000
 set title
-set visualbell
+set novisualbell
 set noerrorbells
-set guifont=Ubuntu\ Mono\ 10
+set guifont=DejaVu\ Sans\ Mono\ 10
 
 if has("gui_running")
 	set guioptions=-t
 endif
 
 " set background=dark
-" colorscheme solarized
+colorscheme zenburn
 
 set tabstop=2 " tab is 2 spaces length
 set shiftwidth=2 " autoindent with 2 spaces
@@ -98,10 +101,23 @@ autocmd FileType php setlocal colorcolumn=100
 autocmd filetype html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 colorcolumn=100
 
 "JS
-au BufNew,BufReadPost *.js setlocal shiftwidth=2 expandtab
+autocmd BufNew,BufReadPost *.js setlocal shiftwidth=2 expandtab
 
 
 " Misc
 " Airline
+
+let g:airline_theme="molokai"
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#show_buffers = 1
+
+let g:airline#extensions#bufferline#enabled = 1
+let g:airline#extensions#bufferline#overwrite_variables = 1
+
+" let g:airline_powerline_fonts = 1
+let g:airline_unicode_fonts = 1
+let g:airline_powerline_fonts = 0
+
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#csv#enabled = 1
+
