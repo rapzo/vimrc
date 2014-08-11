@@ -28,6 +28,7 @@ Plugin 'mgutz/vim-colors'
 Plugin 'bling/vim-airline'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'StanAngeloff/php.vim'
+Plugin 'digitaltoad/vim-jade'
 
 " Gist madness
 Plugin 'mattn/webapi-vim'
