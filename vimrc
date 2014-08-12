@@ -1,5 +1,6 @@
 " My vim coiso
 
+set encoding=utf-8
 set nocompatible
 filetype off
 
@@ -26,6 +27,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'skammer/vim-css-color'
 Plugin 'mgutz/vim-colors'
 Plugin 'bling/vim-airline'
+Plugin 'bling/vim-bufferline'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'digitaltoad/vim-jade'
@@ -66,13 +68,14 @@ set undolevels=1000
 set title
 set novisualbell
 set noerrorbells
-set guifont=DejaVu\ Sans\ Mono\ 10
+set guifont=Droid\ Sans\ Mono\ 11
 
 if has("gui_running")
 	set guioptions=-t
 endif
 
 " set background=dark
+set t_Co=256
 colorscheme zenburn
 
 set tabstop=2 " tab is 2 spaces length
@@ -109,16 +112,22 @@ autocmd BufNew,BufReadPost *.js setlocal shiftwidth=2 expandtab
 " Misc
 " Airline
 
-let g:airline_theme="molokai"
+set laststatus=2
+
+" let g:airline_powerline_fonts = 1
+
+let g:airline_theme="base16"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 1
 
+" let g:airline#extensions#tabline#left_sep = '<'
+" let g:airline#extensions#tabline#left_alt_sep = 'Ħ'
+" let g:airline#extensions#tabline#right_sep = '>'
+" let g:airline#extensions#tabline#right_alt_sep = 'Ħ'
+
+
 let g:airline#extensions#bufferline#enabled = 1
 " let g:airline#extensions#bufferline#overwrite_variables = 1
-
-" let g:airline_powerline_fonts = 1
-let g:airline_unicode_fonts = 1
-let g:airline_powerline_fonts = 0
 
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#csv#enabled = 1
