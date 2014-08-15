@@ -21,6 +21,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'othree/html5.vim'
 Plugin 'leshill/vim-json'
 Plugin 'pangloss/vim-javascript'
+Plugin 'kien/ctrlp.vim'
 
 " Others
 Plugin 'altercation/vim-colors-solarized'
@@ -44,10 +45,16 @@ filetype plugin indent on
 let mapleader = ","
 let g:mapleader = ","
 
-:map <Leader>tn :tabNext <CR>
-:map <Leader>tp :tabprevious <CR>
-:map <Leader>bn :bnext <CR>
-:map <Leader>bp :bprevious <CR>
+" Tab control
+nmap <Leader>tt :tabnew <space>
+nmap <Leader>tn :tabNext <CR>
+nmap <Leader>tp :tabprevious <CR>
+
+" Buffer control
+nmap <Leader>bb :e <space>
+nmap <Leader>bn :bnext <CR>
+nmap <Leader>bp :bprevious <CR>
+
 
 " Save on quit, tab and buffer change
 set autowriteall
