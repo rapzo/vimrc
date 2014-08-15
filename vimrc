@@ -44,6 +44,11 @@ filetype plugin indent on
 let mapleader = ","
 let g:mapleader = ","
 
+:map <Leader>tn :tabNext <CR>
+:map <Leader>tp :tabprevious <CR>
+:map <Leader>bn :bnext <CR>
+:map <Leader>bp :bprevious <CR>
+
 " Save on quit, tab and buffer change
 set autowriteall
 au FocusLost * silent! :wa
@@ -68,7 +73,7 @@ set undolevels=1000
 set title
 set novisualbell
 set noerrorbells
-set guifont=Droid\ Sans\ Mono\ 11
+set guifont=DejaVu\ Sans\ Mono\ 10
 
 if has("gui_running")
 	set guioptions=-t
@@ -76,7 +81,7 @@ endif
 
 " set background=dark
 set t_Co=256
-colorscheme zenburn
+colorscheme jellybeans
 
 set tabstop=2 " tab is 2 spaces length
 set shiftwidth=2 " autoindent with 2 spaces
