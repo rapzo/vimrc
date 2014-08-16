@@ -87,7 +87,7 @@ if has("gui_running")
 endif
 
 " set background=dark
-set t_Co=256
+" set t_Co=256
 colorscheme jellybeans
 
 set tabstop=2 " tab is 2 spaces length
