@@ -84,10 +84,10 @@ set guifont=DejaVu\ Sans\ Mono\ 10
 
 if has("gui_running")
 	set guioptions=-t
+  set t_Co=256
 endif
 
-" set background=dark
-" set t_Co=256
+set background=dark
 colorscheme jellybeans
 
 set tabstop=2 " tab is 2 spaces length
