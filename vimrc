@@ -25,13 +25,13 @@ Plugin 'kien/ctrlp.vim'
 
 " Others
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'skammer/vim-css-color'
 Plugin 'mgutz/vim-colors'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'ap/vim-css-color'
 
 " Gist madness
 Plugin 'mattn/webapi-vim'
