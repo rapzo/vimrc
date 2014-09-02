@@ -55,6 +55,10 @@ nmap <Leader>bb :e <space>
 nmap <Leader>bn :bnext <CR>
 nmap <Leader>bp :bprevious <CR>
 
+" Splits
+nmap <Leader>sv :vsplit <space>
+nmap <Leader>sh :split <space>
+
 
 " Save on quit, tab and buffer change
 set autowriteall
@@ -80,7 +84,7 @@ set undolevels=1000
 set title
 set novisualbell
 set noerrorbells
-set guifont=DejaVu\ Sans\ Mono\ 10
+set guifont=DejaVu\ Sans\ Mono\ 8
 
 if has("gui_running")
 	set guioptions=-t
@@ -126,7 +130,7 @@ autocmd BufNew,BufReadPost *.js setlocal shiftwidth=2 expandtab
 
 set laststatus=2
 
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
 let g:airline_theme="base16"
 let g:airline#extensions#tabline#enabled = 1
