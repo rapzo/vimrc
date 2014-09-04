@@ -19,9 +19,13 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'othree/html5.vim'
-Plugin 'leshill/vim-json'
+Plugin 'elzr/vim-json'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kien/ctrlp.vim'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'ap/vim-css-color'
+Plugin 'tpope/vim-jdaddy'
 
 " Others
 Plugin 'altercation/vim-colors-solarized'
@@ -29,9 +33,8 @@ Plugin 'mgutz/vim-colors'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'StanAngeloff/php.vim'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'ap/vim-css-color'
+Plugin 'majutsushi/tagbar'
+
 
 " Gist madness
 Plugin 'mattn/webapi-vim'
@@ -46,18 +49,21 @@ let mapleader = ","
 let g:mapleader = ","
 
 " Tab control
-nmap <Leader>tt :tabnew <space>
-nmap <Leader>tn :tabNext <CR>
-nmap <Leader>tp :tabprevious <CR>
+nmap <Leader>tt :tabnew<space>
+nmap <Leader>tn :tabNext<CR>
+nmap <Leader>tp :tabprevious<CR>
 
 " Buffer control
-nmap <Leader>bb :e <space>
-nmap <Leader>bn :bnext <CR>
-nmap <Leader>bp :bprevious <CR>
+nmap <Leader>bb :e<space>
+nmap <Leader>bn :bnext<CR>
+nmap <Leader>bp :bprevious<CR>
 
 " Splits
-nmap <Leader>sv :vsplit <space>
-nmap <Leader>sh :split <space>
+nmap <Leader>sv :vsplit<space>
+nmap <Leader>sh :split<space>
+
+" Tagbar
+map <F8> :TagbarToggle<CR>
 
 
 " Save on quit, tab and buffer change
@@ -84,7 +90,7 @@ set undolevels=1000
 set title
 set novisualbell
 set noerrorbells
-set guifont=DejaVu\ Sans\ Mono\ 8
+set guifont=DejaVu\ Sans\ Mono\ 9
 
 if has("gui_running")
 	set guioptions=-t
@@ -122,7 +128,7 @@ autocmd FileType php setlocal colorcolumn=100
 autocmd filetype html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 colorcolumn=100
 
 "JS
-autocmd BufNew,BufReadPost *.js setlocal shiftwidth=2 expandtab
+autocmd BufNew,BufReadPost *.js setlocal shiftwidth=2 expandtab colorcolumn=90
 
 
 " Misc
