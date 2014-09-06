@@ -28,12 +28,13 @@ Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-jdaddy'
 
 " Others
-Plugin 'altercation/vim-colors-cake16'
+
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
-Plugin 'zefei/cake16'
 Plugin 'majutsushi/tagbar'
+Plugin 'zefei/cake16'
 Plugin 'endel/vim-github-colorscheme'
+Plugin 'altercation/vim-colors-solarized'
 
 
 " Gist madness
@@ -92,15 +93,15 @@ set novisualbell
 set noerrorbells
 set guifont=DejaVu\ Sans\ Mono\ 9
 
+set t_Co=256
 if has("gui_running")
 	set guioptions=-t
-  set t_Co=256
+  colorscheme cake16
+else
+  set background=dark
+  colorscheme solarized
 endif
 
-
-
-set background=dark
-colorscheme cake16
 
 set tabstop=2 " tab is 2 spaces length
 set shiftwidth=2 " autoindent with 2 spaces
