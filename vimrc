@@ -28,12 +28,12 @@ Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-jdaddy'
 
 " Others
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'mgutz/vim-colors'
+Plugin 'altercation/vim-colors-cake16'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
-Plugin 'flazz/vim-colorschemes'
+Plugin 'zefei/cake16'
 Plugin 'majutsushi/tagbar'
+Plugin 'endel/vim-github-colorscheme'
 
 
 " Gist madness
@@ -97,8 +97,10 @@ if has("gui_running")
   set t_Co=256
 endif
 
+
+
 set background=dark
-colorscheme jellybeans
+colorscheme cake16
 
 set tabstop=2 " tab is 2 spaces length
 set shiftwidth=2 " autoindent with 2 spaces
@@ -148,7 +150,7 @@ let g:airline#extensions#tabline#show_buffers = 1
 " let g:airline#extensions#tabline#right_alt_sep = 'Ħ'
 
 
-let g:airline#extensions#bufferline#enabled = 1
+" let g:airline#extensions#bufferline#enabled = 1
 " let g:airline#extensions#bufferline#overwrite_variables = 1
 
 let g:airline#extensions#branch#enabled = 1
