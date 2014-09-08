@@ -26,6 +26,7 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-jdaddy'
+Plugin 'kchmck/vim-coffee-script'
 
 " Others
 
