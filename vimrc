@@ -27,6 +27,7 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-jdaddy'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'slim-template/vim-slim.git'
 
 " Others
 
@@ -97,12 +98,11 @@ set guifont=DejaVu\ Sans\ Mono\ 9
 set t_Co=256
 if has("gui_running")
 	set guioptions=-t
-  colorscheme cake16
+  colorscheme github
 else
   set background=dark
   colorscheme solarized
 endif
-
 
 set tabstop=2 " tab is 2 spaces length
 set shiftwidth=2 " autoindent with 2 spaces
