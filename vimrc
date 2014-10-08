@@ -28,6 +28,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-jdaddy'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'slim-template/vim-slim.git'
+Plugin 'lervag/vim-latex'
 
 " Others
 
@@ -133,6 +134,10 @@ autocmd filetype html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 sh
 
 "JS
 autocmd BufNew,BufReadPost *.js setlocal shiftwidth=2 expandtab colorcolumn=90
+
+" TXT
+autocmd FileType txt setlocal colorcolumn=100
+
 
 
 " Misc
