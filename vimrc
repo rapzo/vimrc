@@ -16,28 +16,41 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 
 " Tools related bundles
+" Ruby
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
-Plugin 'othree/html5.vim'
-Plugin 'elzr/vim-json'
+Plugin 'slim-template/vim-slim.git'
+
+" JavaScript
+Plugin 'moll/vim-node'
 Plugin 'pangloss/vim-javascript'
+Plugin 'hallettj/jslint.vim'
+Plugin 'elzr/vim-json'
 Plugin 'kien/ctrlp.vim'
-Plugin 'StanAngeloff/php.vim'
 Plugin 'digitaltoad/vim-jade'
-Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-jdaddy'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'slim-template/vim-slim.git'
-Plugin 'lervag/vim-latex'
 
 " Others
+Plugin 'othree/html5.vim'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'ap/vim-css-color'
+Plugin 'lervag/vim-latex'
 
+
+" vim pluggins
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'majutsushi/tagbar'
 Plugin 'zefei/cake16'
 Plugin 'endel/vim-github-colorscheme'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'marcus/vim-mustang'
+Plugin 'goatslacker/mango.vim'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
 
 
 " Gist madness
@@ -133,7 +146,7 @@ autocmd FileType php setlocal colorcolumn=100
 autocmd filetype html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 colorcolumn=100
 
 "JS
-autocmd BufNew,BufReadPost *.js setlocal shiftwidth=2 expandtab colorcolumn=90
+autocmd BufNew,BufReadPost *.js setlocal shiftwidth=4 expandtab colorcolumn=120
 
 " TXT
 autocmd FileType txt setlocal colorcolumn=100
