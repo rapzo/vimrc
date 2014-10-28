@@ -30,12 +30,14 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'tpope/vim-jdaddy'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'heavenshell/vim-jsdoc'
 
 " Others
 Plugin 'othree/html5.vim'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'ap/vim-css-color'
 Plugin 'lervag/vim-latex'
+Plugin 'groenewege/vim-less'
 
 
 " vim pluggins
@@ -47,10 +49,11 @@ Plugin 'endel/vim-github-colorscheme'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'marcus/vim-mustang'
 Plugin 'goatslacker/mango.vim'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'wincent/command-t'
 
 
 " Gist madness
@@ -107,14 +110,16 @@ set undolevels=1000
 set title
 set novisualbell
 set noerrorbells
-set guifont=DejaVu\ Sans\ Mono\ 9
+set guifont=DejaVu\ Sans\ Mono\ 10
 
 set t_Co=256
+set background=dark
+
 if has("gui_running")
 	set guioptions=-t
-  colorscheme github
+	syntax on
+  colorscheme mustang
 else
-  set background=dark
   colorscheme solarized
 endif
 
@@ -139,18 +144,20 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 " Ruby
 autocmd filetype ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 colorcolumn=100
 
-"PHP
+" PHP
 autocmd FileType php setlocal colorcolumn=100
 
 " HTML
-autocmd filetype html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 colorcolumn=100
+autocmd filetype html setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 shiftwidth=4 colorcolumn=120
 
-"JS
+" CSS
+autocmd filetype css,less setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 shiftwidth=4 colorcolumn=120
+
+" JS
 autocmd BufNew,BufReadPost *.js setlocal shiftwidth=4 expandtab colorcolumn=120
 
 " TXT
 autocmd FileType txt setlocal colorcolumn=100
-
 
 
 " Misc
