@@ -19,12 +19,11 @@ Plugin 'scrooloose/nerdtree'
 " Ruby
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
-Plugin 'slim-template/vim-slim.git'
+" Plugin 'slim-template/vim-slim.git'
 
 " JavaScript
 Plugin 'moll/vim-node'
 Plugin 'pangloss/vim-javascript'
-Plugin 'hallettj/jslint.vim'
 Plugin 'elzr/vim-json'
 Plugin 'kien/ctrlp.vim'
 Plugin 'digitaltoad/vim-jade'
@@ -37,23 +36,24 @@ Plugin 'othree/html5.vim'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'ap/vim-css-color'
 Plugin 'lervag/vim-latex'
-Plugin 'groenewege/vim-less'
+" Plugin 'groenewege/vim-less'
 
 
-" vim pluggins
-Plugin 'bling/vim-airline'
+" vim plugins
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'bling/vim-bufferline'
 Plugin 'majutsushi/tagbar'
-Plugin 'zefei/cake16'
-Plugin 'endel/vim-github-colorscheme'
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'zefei/cake16'
+" Plugin 'endel/vim-github-colorscheme'
+" Plugin 'altercation/vim-colors-solarized'
 Plugin 'marcus/vim-mustang'
-Plugin 'goatslacker/mango.vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
+" Plugin 'goatslacker/mango.vim'
+" Plugin 'MarcWeber/vim-addon-mw-utils'
+" Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
-Plugin 'wincent/command-t'
+" Plugin 'wincent/command-t'
 
 
 " Gist madness
@@ -110,17 +110,18 @@ set undolevels=1000
 set title
 set novisualbell
 set noerrorbells
-set guifont=DejaVu\ Sans\ Mono\ 10
+set guifont=Inconsolata\ for\ Powerline:h13
 
 set t_Co=256
-set background=dark
+syntax on
 
 if has("gui_running")
 	set guioptions=-t
-	syntax on
+  set background=dark
   colorscheme mustang
 else
-  colorscheme solarized
+  set background=dark
+  colorscheme mustang
 endif
 
 set tabstop=2 " tab is 2 spaces length
@@ -151,7 +152,7 @@ autocmd FileType php setlocal colorcolumn=100
 autocmd filetype html setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 shiftwidth=4 colorcolumn=120
 
 " CSS
-autocmd filetype css,less setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 shiftwidth=4 colorcolumn=120
+autocmd filetype css,less,sass,scss setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 shiftwidth=4 colorcolumn=120
 
 " JS
 autocmd BufNew,BufReadPost *.js setlocal shiftwidth=4 expandtab colorcolumn=120
@@ -167,19 +168,13 @@ set laststatus=2
 
 let g:airline_powerline_fonts = 1
 
-let g:airline_theme="base16"
+let g:airline_theme="distinguished"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 1
-
-" let g:airline#extensions#tabline#left_sep = '<'
-" let g:airline#extensions#tabline#left_alt_sep = 'Ħ'
-" let g:airline#extensions#tabline#right_sep = '>'
-" let g:airline#extensions#tabline#right_alt_sep = 'Ħ'
-
-
-" let g:airline#extensions#bufferline#enabled = 1
-" let g:airline#extensions#bufferline#overwrite_variables = 1
-
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#csv#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+let g:bufferline_echo = 0
 
